@@ -1,3 +1,105 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* poppins-regular - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/poppins-v20-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./assets/fonts/poppins-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./assets/fonts/poppins-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./assets/fonts/poppins-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./assets/fonts/poppins-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+/* poppins-500 - latin */
+@font-face {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+src: url('./assets/fonts/poppins-v20-latin-500.eot'); /* IE9 Compat Modes */
+src: local(''),
+        url('./assets/fonts/poppins-v20-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('./assets/fonts/poppins-v20-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+        url('./assets/fonts/poppins-v20-latin-500.woff') format('woff'), /* Modern Browsers */
+        url('./assets/fonts/poppins-v20-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+/* poppins-700 - latin */
+@font-face {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+src: url('./assets/fonts/poppins-v20-latin-700.eot'); /* IE9 Compat Modes */
+src: local(''),
+        url('./assets/fonts/poppins-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('./assets/fonts/poppins-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+        url('./assets/fonts/poppins-v20-latin-700.woff') format('woff'), /* Modern Browsers */
+        url('./assets/fonts/poppins-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+#cta{
+        background-image: url(./assets/images/bg-boost-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+/* 1em = 16px (from html root) 576px/16px = 36em */
+@media only screen and (max-width: 36em) {
+        #cta{
+                background-image: url(./assets/images/bg-boost-mobile.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+        }
+}
+
+.ficon:hover{
+        filter:invert(79%) sepia(61%) saturate(464%) hue-rotate(136deg) brightness(89%) contrast(85%);
+}
+
+/* Hamburger Menu */
+.hamburger{
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        transition: all 0.25s;
+        position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom{
+position: absolute;
+width: 24px;
+height: 2px;
+top:0;
+left:0;
+background: #000;
+transform: rotate(0);
+transition: all 0.5s;
+}
+
+.hamburger-middle{
+transform: translateY(7px);
+}
+
+.hamburger-bottom{
+transform: translateY(14px);
+}
+
+.open{
+transform: rotate(90deg);
+}
+
+.open .hamburger-top{
+transform: rotate(45deg) translate(6px,6px);
+}
+
+.open .hamburger-middle{
+display: none;
+}
+
+.open .hamburger-bottom{
+transform: rotate(135deg) translate(6px, -6px);
+}
